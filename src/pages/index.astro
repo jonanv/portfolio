@@ -1,8 +1,33 @@
 ---
+import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<section class="w-full lg:w-[740px] mx-auto py-10">
+			<img 
+				src="../../public/jonanv.webp" 
+				alt="jonanv photo"
+				class="size-24 rounded-full mb-4">
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
+				Hola, soy jonanv 
+				<a href="https://www.linkedin.com/in/jonanv/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center">
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl opacity-80">
+				+5 años de experiencia. Desarrollador Web. De Manizales, Colombia🇨🇴. 
+				Me especializo en hacer webs
+			</h2>
+		</section>
+
+		<ul>
+			<li></li>
+		</ul>
+
 	</main>
 </Layout>

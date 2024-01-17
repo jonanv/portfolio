@@ -1,6 +1,9 @@
 ---
 import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GitHubIcon from '../components/icons/GitHub.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -24,11 +27,21 @@ import Layout from '../layouts/Layout.astro';
 				<span class="text-yellow-300/100">De Manizales, Colombia🇨🇴.</span>
 				<span class="opacity-75">Me especializo en hacer webs</span>
 			</h2>
+
+			<nav class="flex gap-x-2 mt-8">
+				<SocialPill
+					href="https://www.linkedin.com/in/jonanv/">
+					<LinkedInIcon class="size-6"></LinkedInIcon>
+					LinkedIn
+				</SocialPill>
+				<SocialPill
+					href="https://github.com/jonanv/">
+					<GitHubIcon class="size-6"></GitHubIcon>
+					GitHub
+				</SocialPill>
+			</nav>
 		</section>
 
-		<ul>
-			<li></li>
-		</ul>
 
 	</main>
 </Layout>

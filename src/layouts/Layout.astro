@@ -1,13 +1,13 @@
 ---
-import '@fontsource-variable/onest';
+import "@fontsource-variable/onest";
 
-import Header from '@components/Header.astro';
-import Background from '@components/Background.astro';
-import Footer from '@components/Footer.astro';
+import Header from "@/components/Header.astro";
+import Background from "@/components/Background.astro";
+import Footer from "@/components/Footer.astro";
 
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
@@ -15,39 +15,39 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={ description } />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{ title }</title>
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
 
-	<body>
-		<Background />
-		<Header></Header>
-		<slot />
+  <body>
+    <!-- <Background /> -->
+    <Header />
+    <slot />
     <Footer />
-	</body>
+  </body>
 </html>
 
 <style is:global>
-	:root {
-		color-scheme: dark light;
-	}
+  :root {
+    color-scheme: dark light;
+  }
 
-	html {
-		font-family: 'Onest Variable', system-ui, sans-serif;
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
-	}
+  }
 
-	body {
-		background: #201f1f;
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+  body {
+    background: #201f1f;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
   @media (prefers-reduced-motion: reduce) {
     html {

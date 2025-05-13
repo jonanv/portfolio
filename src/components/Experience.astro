@@ -1,0 +1,50 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "5 JULIO 2022 - Actual",
+    title: "Analista de Sistemas Senior",
+    company: "Asesoftware SAS",
+    description:
+      "- Desarrollé una aplicación web para el Banco de la República para la gestión de inmuebles. \n- Aporté en la construcción del modelo Entidad-Relación en SQLServer. \n- Migré las aplicaciones MRC (Sistema de Hechos Económicos) y NOVA (Sistema de Información de Presupuesto) con AngularJS v18 y Spring Boot. \n- Desarrollé nuevas funcionalidades en aplicaciones con Django (Backend) y AngularJS v1 (Frontend).",
+  },
+  {
+    date: "7 Abril 2021 - 4 JULIO 2022 (1 año y 3 meses)",
+    title: "Técnico en Sistemas Grado 10",
+    company: "Rama Judicial Palacio de Justicia Fanny González Franco - Oficina de Ejecución Civil Municipal de Manizales",
+    description:
+      "Desarrollé una herramienta para gestión de procesos judiciales, integrada con Macro en Excel para la Oficina de Familia, optimizando la elaboración del índice electrónico. \n- Creé un digiturno virtual con PHP v7 (Backend) y VueJS v3 (Frontend), utilizando Bootstrap v5, jQuery y MySQL. \n-Implementé el digiturno virtual para optimizar la atención en la Oficina de Ejecución y superar barreras impuestas por la pandemia. de COVID-19.",
+  },
+  {
+    date: "8 SEPTIEMBRE 2020 - 9 MARZO 2021 (6 MESES)",
+    title: "Development Engineer Junior Advance",
+    company: "Newshore Servicios Globales SL Sucursal Colombia",
+    description:
+      "- Hice parte de la migración de plataforma de reservas de vuelos (IBE) de JavaScript a AngularJS (Frontend) y .NET (Backend), integrando API's en .NET con el CMS Umbraco. \n - Desarrollé por sprints mediante tickets asignados, asegurando cumplimiento de tiempos y calidad del código. \n - Colaboré con el equipo QA para validación y despliegue en entornos de prueba y producción.",
+  },
+  {
+    date: "10 OCTUBRE 2019 - 26 JUNIO 2020 (9 MESES)",
+    title: "Profesional en soluciones tecnológicas",
+    company: "Confa (Caja de Compensación Familiar de Caldas)",
+    description:
+      "- Desarrollé y modificaqué del Portal Transaccional (Boletines preescolar y Recaudo en línea Créditos) con AngularJS v8, integrando tecnologías como CSS3, HTML5, Bootstrap v4, TypeScript y jQuery. \n - Gestioné versiones y consumo de API REST en Java, utilizando Git en Bitbucket y Postman para pruebas. \n - Administré y optimizé el portal web en WordPress, incluyendo seguridad, rendimiento y gestión de plugins. \n - Apoyé el despliegue de servidor local con control de versiones Git. \n - Desarrollé una aplicación móvil de reconocimiento facial en React Native, evaluando y comparando Flutter con Dart.",
+  },
+  {
+    date: "19 NOVIEMBRE 2018 - 16 SEPTIEMBRE 2019 (10 meses)",
+    title: "Analista de desarrollo de software",
+    company: "Jaivaná S.A.S.",
+    description:
+      "- Apoyé en la migración del sistema Jaivaná de aplicación de escritorio en Java a plataforma web con Spring Boot (Backend) y ReactJS (Frontend), integrando CSS3, HTML5 y jQuery. \n - Implementé de Bootstrap y Material UI para optimización de la interfaz. \n - Gestione de base de datos PostgreSQL y control de versiones con Git en Bitbucket. \n - Integré API REST y pruebas con Postman.",
+  }
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

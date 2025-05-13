@@ -1,87 +1,51 @@
 ---
-import About from "@/components/About.astro";
-import Badge from "@/components/Badge.astro";
-import BriefcaseIcon from "@/components/icons/Briefcase.astro";
-import CodeIcon from "@/components/icons/Code.astro";
-import Experience from "@/components/Experience.astro";
-import GitHubIcon from "@/components/icons/GitHub.astro";
-import Layout from "@/layouts/Layout.astro";
-import LinkedInIcon from "@/components/icons/LinkedIn.astro";
-import MailIcon from "@/components/icons/Mail.astro";
-import Projects from "@/components/Projects.astro";
-import SectionContainer from "@/components/SectionContainer.astro";
-import SocialPill from "@/components/SocialPill.astro";
-import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+import Layout from "@/layouts/Layout.astro"
+
+import AboutMe from "@/components/AboutMe.astro"
+import Briefcase from "@/components/icons/Briefcase.astro"
+// import CodeIcon from "@/components/icons/Code.astro"
+import Experience from "@/components/Experience.astro"
+import ProfileCheck from "@/components/icons/ProfileCheck.astro"
+// import Projects from "@/components/Projects.astro"
+import SectionContainer from "@/components/SectionContainer.astro"
+import Hero from "@/components/Hero.astro"
+import TitleSection from "@/components/TitleSection.astro"
 ---
 
 <Layout
-  title="Portfolio de jonanv - Desarrollado y programador web, con 6 años de experiencia"
-  description="Contrata a jonanv para crear tu aplicacion web o móvil."
+  title="Jonanv - Desarrollador y Programador Web con 7 años de experiencia"
+  description="Contrata a jonanv para crear tu aplicación web o móvil. Desarrollador Web, especializado en crear aplicaciones."
 >
-  <main class="px-2">
-    <SectionContainer class="py-44 pb-32">
-      <img
-        src="/jonanv.webp"
-        alt="jonanv photo"
-        class="size-24 rounded-full mb-4"
-      />
-      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-        Hola, soy jonanv
-        <a
-          href="https://www.linkedin.com/in/jonanv/"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-        >
-          <Badge>Disponible para trabajar</Badge>
-        </a>
-      </h1>
-      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
-        <span>+6 años de experiencia.</span><span class="text-red-300/80">
-          Desarrollador Web.</span
-        >
-        <span class="text-yellow-300/100">De Manizales, Colombia 🇨🇴.</span>
-        <span class="opacity-75">Me especializo en hacer webs</span>
-      </h2>
-
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill href="https://www.linkedin.com/in/jonanv/">
-          <LinkedInIcon class="size-4 md:size-6" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/jonanv/">
-          <GitHubIcon class="size-4 md:size-6" />
-          GitHub
-        </SocialPill>
-        <SocialPill href="mailto:jonan-vargas23@hotmail.com">
-          <MailIcon class="size-4 md:size-6" />
-          jonan-vargas23@hotmail.com
-        </SocialPill>
-      </nav>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
     </SectionContainer>
-
-    <SectionContainer id="experience">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-        <BriefcaseIcon class="size-7" />
+    <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <TitleSection>
+        <Briefcase class="size-8" />
         Experiencia laboral
-      </h2>
+      </TitleSection>
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="projects">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+    <!-- <SectionContainer id="proyectos">
+      <TitleSection>
         <CodeIcon class="size-7" />
         Proyectos
-      </h2>
+      </TitleSection>
       <Projects />
-    </SectionContainer>
+    </SectionContainer> -->
 
-    <SectionContainer id="about">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
-        <ProfileCheck class="size-7" />
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
         Sobre mí
-      </h2>
-      <About />
+      </TitleSection>
+      <AboutMe />
     </SectionContainer>
+  </div>
   </main>
 </Layout>

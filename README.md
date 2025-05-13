@@ -1,8 +1,8 @@
-# 👨🏻‍💻 Porfolio
+# 👨🏻‍💻 Portfolio
 
 <div align="center">
   <a href="https://jonanv.dev/">
-    <img src="./public/porfolio.webp">
+    <img src="./public/portfolio.webp">
   </a>
   <p></p>
 </div>

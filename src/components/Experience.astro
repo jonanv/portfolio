@@ -1,5 +1,88 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
+
+import Git from "./icons/Git.astro";
+import Angular from "./icons/Angular.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import Java from "./icons/Java.astro";
+import SpringBoot from "./icons/SpringBoot.astro";
+import Python from "./icons/Python.astro";
+import Django from "./icons/Django.astro";
+import GitHub from "./icons/GitHub.astro";
+import Php from "./icons/Php.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Vue from "./icons/Vue.astro";
+import React from "./icons/React.astro";
+import Docker from "./icons/Docker.astro";
+
+const TAGS = {
+  GIT: {
+    name: "Git",
+    class: "bg-black text-white",
+    icon: Git,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-black text-white",
+    icon: TypeScript,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-black text-white",
+    icon: Angular,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-black text-white",
+    icon: Java,
+  },
+  SPRINGBOOT: {
+    name: "SpringBoot",
+    class: "bg-black text-white",
+    icon: SpringBoot,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-black text-white",
+    icon: Python,
+  },
+  DJANGO: {
+    name: "Django",
+    class: "bg-black text-white",
+    icon: Django,
+  },
+  GITHUB: {
+    name: "GitHub",
+    class: "bg-black text-white",
+    icon: GitHub,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-black text-white",
+    icon: Php,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-black text-white",
+    icon: JavaScript,
+  },
+  VUE: {
+    name: "Vue",
+    class: "bg-black text-white",
+    icon: Vue,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: React,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-black text-white",
+    icon: Docker,
+  },
+};
+
 const EXPERIENCE = [
   {
     date: "5 julio 2022 - actual",
@@ -10,7 +93,8 @@ const EXPERIENCE = [
       "✅ Aporté en la construcción del modelo Entidad-Relación en SQLServer.",
       "✅ Migré las aplicaciones MRC (Sistema de Hechos Económicos) y NOVA (Sistema de Información de Presupuesto) con AngularJS v18 y Spring Boot.",
       "✅ Desarrollé nuevas funcionalidades en aplicaciones con Django (Backend) y AngularJS v1 (Frontend).",
-    ]
+    ],
+    stack: [TAGS.GIT, TAGS.TYPESCRIPT, TAGS.JAVASCRIPT, TAGS.ANGULAR, TAGS.JAVA, TAGS.SPRINGBOOT, TAGS.PYTHON, TAGS.DJANGO, TAGS.DOCKER],
   },
   {
     date: "7 abril 2021 - 4 julio 2022",
@@ -20,7 +104,8 @@ const EXPERIENCE = [
       "✅ Desarrollé una herramienta para gestión de procesos judiciales, integrada con Macro en Excel para la Oficina de Familia, optimizando la elaboración del índice electrónico.",
       "✅ Creé un digiturno virtual con PHP v7 (Backend) y VueJS v3 (Frontend), utilizando Bootstrap v5, jQuery y MySQL.",
       "✅ Implementé el digiturno virtual para optimizar la atención en la Oficina de Ejecución y superar barreras impuestas por la pandemia. de COVID-19.",
-    ]
+    ],
+    stack: [TAGS.GIT, TAGS.GITHUB, TAGS.PHP, TAGS.JAVASCRIPT, TAGS.VUE],
   },
   {
     date: "8 septiembre 2020 - 9 marzo 2021",
@@ -30,7 +115,8 @@ const EXPERIENCE = [
       "✅ Hice parte de la migración de plataforma de reservas de vuelos (IBE) de JavaScript a AngularJS (Frontend) y .NET (Backend), integrando API's en .NET con el CMS Umbraco.",
       "✅ Desarrollé por sprints mediante tickets asignados, asegurando cumplimiento de tiempos y calidad del código.",
       "✅ Colaboré con el equipo QA para validación y despliegue en entornos de prueba y producción.",
-    ]
+    ],
+    stack: [TAGS.GIT, TAGS.TYPESCRIPT, TAGS.JAVASCRIPT, TAGS.ANGULAR]
   },
   {
     date: "10 octubre 2019 - 26 junio 2020",
@@ -42,7 +128,8 @@ const EXPERIENCE = [
       "✅ Administré y optimizé el portal web en WordPress, incluyendo seguridad, rendimiento y gestión de plugins.",
       "✅ Apoyé el despliegue de servidor local con control de versiones Git.",
       "✅ Desarrollé una aplicación móvil de reconocimiento facial en React Native, evaluando y comparando Flutter con Dart.",
-    ]
+    ],
+    stack: [TAGS.GIT, TAGS.TYPESCRIPT, TAGS.JAVASCRIPT, TAGS.ANGULAR, TAGS.JAVA]
   },
   {
     date: "19 noviembre 2018 - 16 septiembre 2019",
@@ -53,7 +140,8 @@ const EXPERIENCE = [
       "✅ Implementé de Bootstrap y Material UI para optimización de la interfaz.", 
       "✅ Gestione de base de datos PostgreSQL y control de versiones con Git en Bitbucket.",
       "✅ Integré API REST y pruebas con Postman.",
-    ]
+    ],
+    stack: [TAGS.GIT, TAGS.REACT, TAGS.JAVASCRIPT, TAGS.JAVA, TAGS.SPRINGBOOT]
   }
 ];
 ---

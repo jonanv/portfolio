@@ -7,9 +7,14 @@ interface Props {
   description: string[];
   link?: string;
   date: string;
+  stack?: {
+    name: string;
+    class: string;
+    icon: any;
+  }[];
 }
 
-const { title, company, description, link, date } = Astro.props;
+const { title, company, description, link, date, stack } = Astro.props;
 ---
 
 <div
@@ -21,13 +26,30 @@ const { title, company, description, link, date } = Astro.props;
         &bull;
       </span>
 
-      <h3 class="text-xl font-bold text-yellow-400">{title}</h3>
+      <h3 class="text-xl font-bold text-yellow-400">
+        {title}
+      </h3>
       <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
         {company}
       </h4>
       <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">
         {date}
       </time>
+      <div class="sticky top-0 mt-4 flex flex-col gap-y-2">
+        <ul class="flex flex-wrap mb-2 gap-x-2 gap-y-1">
+          {stack?.map((item) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${item.class} py-1 px-2 `}
+              >
+                <item.icon class="size-4" />
+                {item.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
     </div>
   </div>
   <div

@@ -2,39 +2,8 @@
 import GitHub from "./icons/GitHub.astro";
 import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
-import Git from "./icons/Git.astro";
-import TypeScript from "./icons/TypeScript.astro";
-import Angular from "./icons/Angular.astro";
-import CSS3 from "./icons/CSS3.astro";
-import HTML5 from "./icons/HTML5.astro";
+import { TAGS } from "./Technologies.astro";
 
-const TAGS = {
-  GIT: {
-    name: "Git",
-    class: "bg-black text-white",
-    icon: Git,
-  },
-  TYPESCRIPT: {
-    name: "TypeScript",
-    class: "bg-black text-white",
-    icon: TypeScript,
-  },
-  ANGULAR: {
-    name: "Angular",
-    class: "bg-black text-white",
-    icon: Angular,
-  },
-  CSS3: {
-    name: "CSS3",
-    class: "bg-black text-white",
-    icon: CSS3,
-  },
-  HTML5: {
-    name: "HTML5",
-    class: "bg-black text-white",
-    icon: HTML5,
-  },
-};
 const PROJECTS = [
   {
     title: "Confa pago de créditos en línea",

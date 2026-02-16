@@ -6,6 +6,22 @@ import { TAGS } from "./Technologies.astro";
 
 const PROJECTS = [
   {
+    title: "Inmuebles Banco de la República",
+    description: "Aplicación web para la gestión de inmuebles del Banco de la República. Permite a los usuarios administrar y visualizar información de los inmuebles de manera eficiente. Creada desde cero con Angular, TypeScript, Java, SpringBoot, SQLServer, CSS3 y HTML5.",
+    link: "",
+    github: "",
+    image: "/projects/inmuebles-banrep.webp",
+    tags: [TAGS.GIT, TAGS.TYPESCRIPT, TAGS.ANGULAR, TAGS.CSS3, TAGS.HTML5, TAGS.BOOTSTRAP, TAGS.JAVA, TAGS.SPRINGBOOT, TAGS.MYSQL, TAGS.APIRESTful],
+  },
+  {
+    title: "Digiturno - Sistema de gestión de turnos",
+    description: "Aplicación web para la gestión de turnos en la Oficina de Ejecución Civil Municipal de Manizales. Permite a los usuarios reservar turnos de manera eficiente y segura. Creada desde cero con PHP, JavaScript, VueJS, Bootstrap, jQuery, MySQL, CSS3 y HTML5.",
+    link: "",
+    github: "https://github.com/jonanv/digiturno-php",
+    image: "/projects/digiturno.webp",
+    tags: [TAGS.GIT, TAGS.GITHUB, TAGS.JAVASCRIPT, TAGS.VUE, TAGS.PHP, TAGS.CSS3, TAGS.HTML5, TAGS.BOOTSTRAP, TAGS.SQLSERVER],
+  },
+  {
     title: "Confa pago de créditos en línea",
     description: "Aplicación web para el pago de créditos en línea. Permite a los usuarios realizar pagos de sus créditos de manera rápida y segura. Creada desde cero con Angular, TypeScript, CSS3 y HTML5.",
     link: "https://app.confa.co:8339/",
@@ -61,11 +77,11 @@ const PROJECTS = [
             {title}
           </h3>
           <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
+            <ul class="flex flex-wrap mb-2 gap-x-2 gap-y-1">
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
                   >
                     <tag.icon class="size-4" />
                     {tag.name}
